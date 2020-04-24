@@ -1,0 +1,25 @@
+{
+  "name": "es6",
+  "version": "0.0.1",
+  "description": "Opa Protracor, Babel, ES6 style...",
+  "private": true,
+  "dependencies": {
+    "babel-core": "^6.1.21",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.1.18",
+    "chromedriver": "^2.20.0",
+    "fs-extra": "^9.0.0",
+    "jasmine-reporters": "^2.3.2",
+    "protractor": "^3.0.0",
+    "protractor-html-reporter-2": "^1.0.4",
+    "protractor-jasmine2-screenshot-reporter": "^0.5.0"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "scripts": {
+    "postinstall": "node node_modules/protractor/bin/webdriver-manager update"
+  }
+}

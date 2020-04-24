@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites disabled="0" errors="0" failures="0" tests="2" time="20.994">
+ <testsuite name="Authentication" timestamp="2020-04-25T00:18:53" hostname="localhost" time="20.994" errors="0" tests="2" skipped="1" disabled="0" failures="0">
+  <testcase classname="Authentication" name="should login" time="0.046">
+   <skipped message="Temporarily disabled with xit" />
+  </testcase>
+  <testcase classname="Authentication" name="login to google" time="20.939" />
+ </testsuite>
+</testsuites>
