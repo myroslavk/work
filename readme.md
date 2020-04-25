@@ -1,26 +1,9 @@
-# E2E testing with Protractor, Jasmine ES6 and Babel
+# E2E tests using Protractor, Jasmine ES6 and Babel for trial task
 
 Run follow commands: 
 
 ```
-git clone git@github.com:OzzyCzech/es6protractor.git
-cd es6protractor && npm install
-node_modules/protractor/bin/protractor ./dev.conf.js
+git clone https://github.com/myroslavk/work.git
+cd work && npm install
+npm run
 ```
-
-or (for multibrowser E2E tests)
-
-```
-node_modules/protractor/bin/protractor ./dev.conf.multi.js
-```
-
-## See Docs
-
-- http://jasmine.github.io/
-- https://angular.github.io/protractor/
-- https://babeljs.io/
-- http://www.ecma-international.org/ecma-262/6.0/
-
-## Good to know 
-
-- [Timeouts](https://github.com/angular/protractor/blob/master/docs/timeouts.md)
