@@ -1,7 +1,7 @@
 {
-  "name": "es6",
+  "name": "payever",
   "version": "0.0.1",
-  "description": "Opa Protracor, Babel, ES6 style...",
+  "description": "Payever trial task",
   "private": true,
   "dependencies": {
     "babel-core": "^6.1.21",
@@ -11,8 +11,7 @@
     "fs-extra": "^9.0.0",
     "jasmine-reporters": "^2.3.2",
     "protractor": "^3.0.0",
-    "protractor-html-reporter-2": "^1.0.4",
-    "protractor-jasmine2-screenshot-reporter": "^0.5.0"
+    "protractor-html-reporter-2": "^1.0.4"
   },
   "babel": {
     "presets": [

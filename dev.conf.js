@@ -1,9 +1,8 @@
 require('babel-core/register');
-// var HtmlScreenshotReporter = require('protractor-jasmine2-screenshot-reporter');
-var jasmineReporters = require('jasmine-reporters');
+let jasmineReporters = require('jasmine-reporters');
 
-var reportsDirectory = './reports';
-var dashboardReportDirectory = reportsDirectory + '/dashboardReport';
+let reportsDirectory = './reports';
+let dashboardReportDirectory = reportsDirectory + '/dashboardReport';
 
 exports.config = {
 
@@ -15,7 +14,7 @@ exports.config = {
 	directConnect: true,
 	//chromeDriver: '../../node_modules/protractor/selenium/chromedriver',
 
-	baseUrl: 'https://www.zdrojak.cz/',
+	baseUrl: 'https://commerceos.staging.devpayever.com',
 
 	// Capabilities to be passed to the webdriver instance.
 
@@ -27,16 +26,15 @@ exports.config = {
 	capabilities: {
 		'browserName': 'chrome',
 		'chromeOptions': {
-			'args': ['--test-type'] // https://github.com/theintern/intern/issues/210#issuecomment-46800826
+			'args': ['--test-type']
 		}
 	},
 
-	onPrepare: function () {
+	onPrepare: () => {
 		// Change browser size after launch
-		browser.driver.manage().window().setSize(1280, 1024);
+		browser.driver.manage().window().maximize();
 
-		// https://github.com/angular/protractor/blob/9891d430aff477c5feb80ae01b48356866820132/lib/protractor.js#L158
-		browser.ignoreSynchronization = true; // Angular we don't have it...
+		browser.ignoreSynchronization = true; 
 		   // xml report generated for dashboard
 		jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
             consolidateAll: true,
@@ -44,19 +42,18 @@ exports.config = {
             filePrefix: 'xmlOutput'
         }));
 
-        var fs = require('fs-extra');
+        let fs = require('fs-extra');
         if (!fs.existsSync(dashboardReportDirectory)) {
             fs.mkdirSync(dashboardReportDirectory);
         }
 
         jasmine.getEnv().addReporter({
-            specDone: function (result) {
+            specDone: result => {
                 if (result.status == 'failed') {
-                    browser.getCapabilities().then(function (caps) {
-                        var browserName = caps.get('browserName');
-
-                        browser.takeScreenshot().then(function (png) {
-                            var stream = fs.createWriteStream(dashboardReportDirectory + '/' + browserName + '-' + result.fullName + '.png');
+                    browser.getCapabilities().then( caps => {
+                        let browserName = caps.get('browserName');
+                        browser.takeScreenshot().then( png => {
+                            let stream = fs.createWriteStream(dashboardReportDirectory + '/' + result.fullName.split(" ").join("-") + '.png');
                             stream.write(new Buffer(png, 'base64'));
                             stream.end();
                         });
@@ -66,16 +63,16 @@ exports.config = {
         });
 	},
 
-	onComplete: function () {
-        var browserName, browserVersion;
-        var capsPromise = browser.getCapabilities();
+	onComplete: () => {
+        let browserName, browserVersion;
+        let capsPromise = browser.getCapabilities();
 
-        capsPromise.then(function (caps) {
+        capsPromise.then( caps => {
             browserName = caps.get('browserName');
             browserVersion = caps.get('version');
             platform = caps.get('platform');
 
-            var HTMLReport = require('protractor-html-reporter-2');
+            let HTMLReport = require('protractor-html-reporter-2');
             testConfig = {
                 reportTitle: 'Protractor Test Execution Report',
                 outputPath: dashboardReportDirectory,
@@ -94,11 +91,7 @@ exports.config = {
 	// Spec patterns are relative to the current working directly when
 	// protractor is called.
 	specs: [
-		'**/*.spec.js'
-	],
-
-	exclude: [
-		'**/*.unsafe.spec.js' // registrace, nelze poustet ve vice vlaknech
+		'*/spec.js'
 	],
 
 	// Options to be passed to Jasmine-node.

@@ -1,9 +1,109 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites disabled="0" errors="0" failures="0" tests="2" time="20.994">
- <testsuite name="Authentication" timestamp="2020-04-25T00:18:53" hostname="localhost" time="20.994" errors="0" tests="2" skipped="1" disabled="0" failures="0">
-  <testcase classname="Authentication" name="should login" time="0.046">
-   <skipped message="Temporarily disabled with xit" />
+<testsuites disabled="0" errors="0" failures="3" tests="3" time="96.985">
+ <testsuite name="Authentication" timestamp="2020-04-25T20:09:56" hostname="localhost" time="96.985" errors="0" tests="3" skipped="0" disabled="0" failures="3">
+  <testcase classname="Authentication" name="Should navigate to widget Transactions and add item with id=52" time="28.348" />
+  <testcase classname="Authentication" name="Should navigate to widget Connect and install &quot;Ebay&quot;" time="31.099">
+   <failure type="exception" message="Failed: Wait timed out after 10015ms"><![CDATA[TimeoutError: Wait timed out after 10015ms
+    at C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2201:17
+    at ManagedPromise.invokeCallback_ (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1376:14)
+    at TaskQueue.execute_ (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+    at TaskQueue.executeNext_ (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3067:27)
+    at C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2927:27
+    at C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:668:7
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+From: Task: <anonymous wait>
+    at scheduleWait (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2188:20)
+    at ControlFlow.wait (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2517:12)
+    at Driver.wait (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\webdriver.js:934:29)
+    at run (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\built\browser.js:59:33)
+    at ProtractorBrowser.to.<computed> [as wait] (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\built\browser.js:67:16)
+    at Connect.installConnection (F:\work\tests\app\Connect.js:30:21)
+    at UserContext.<anonymous> (F:\work\tests\spec.js:32:17)
+    at C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:112:25
+    at new ManagedPromise (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1077:7)
+    at ControlFlow.promise (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2505:12)
+From: Task: Run it("Should navigate to widget Connect and install "Ebay"") in control flow
+    at UserContext.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:94:19)
+    at attempt (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4297:26)
+    at QueueRunner.run (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4217:20)
+    at QueueRunner.execute (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4199:10)
+    at Spec.queueRunnerFactory (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:909:35)
+    at Spec.execute (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:526:10)
+    at UserContext.fn (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:5340:37)
+    at attempt (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4297:26)
+    at QueueRunner.run (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4217:20)
+    at runNext (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4257:20)
+From asynchronous test: 
+Error
+    at Suite.<anonymous> (F:\work\tests\spec.js:29:5)
+    at addSpecsToSuite (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1107:25)
+    at Env.describe (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1074:7)
+    at describe (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4399:18)
+    at Object.<anonymous> (F:\work\tests\spec.js:15:1)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at loader (F:\work\node_modules\babel-register\lib\node.js:144:5)
+    at Object.require.extensions.<computed> [as .js] (F:\work\node_modules\babel-register\lib\node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:815:32)]]>
+   </failure>
   </testcase>
-  <testcase classname="Authentication" name="login to google" time="20.939" />
+  <testcase classname="Authentication" name="Should navigate to widget Product and add product" time="21.28">
+   <failure type="exception" message="Error: ENOENT: no such file or directory, open &apos;F:\work\reports\dashboardReport\Authentication-Should-navigate-to-widget-Connect-and-install-&quot;Ebay&quot;.png&apos;"><![CDATA[Error: ENOENT: no such file or directory, open 'F:\work\reports\dashboardReport\Authentication-Should-navigate-to-widget-Connect-and-install-"Ebay".png']]>
+   </failure>
+   <failure type="exception" message="Failed: invalid argument: File not found : **/images/9e8e68abe0c2dd6b6f39e26c25598988.png
+  (Session info: chrome=81.0.4044.122)
+  (Driver info: chromedriver=80.0.3987.106 (f68069574609230cf9b635cd784cfb1bf81bb53a-refs/branch-heads/3987@{#882}),platform=Windows NT 10.0.18363 x86_64)"><![CDATA[WebDriverError: invalid argument: File not found : **/images/9e8e68abe0c2dd6b6f39e26c25598988.png
+  (Session info: chrome=81.0.4044.122)
+  (Driver info: chromedriver=80.0.3987.106 (f68069574609230cf9b635cd784cfb1bf81bb53a-refs/branch-heads/3987@{#882}),platform=Windows NT 10.0.18363 x86_64)
+    at Object.checkLegacyResponse (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\error.js:546:15)
+    at parseHttpResponse (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\http.js:509:13)
+    at C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\http.js:441:30
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+From: Task: WebElement.sendKeys()
+    at Driver.schedule (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\webdriver.js:807:17)
+    at WebElement.schedule_ (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\webdriver.js:2010:25)
+    at WebElement.sendKeys (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\webdriver.js:2174:19)
+    at actionFn (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\built\element.js:89:44)
+    at Array.map (<anonymous>)
+    at C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\built\element.js:461:65
+    at ManagedPromise.invokeCallback_ (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1376:14)
+    at TaskQueue.execute_ (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+    at TaskQueue.executeNext_ (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3067:27)
+    at C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2927:27Error
+    at ElementArrayFinder.applyAction_ (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\built\element.js:459:27)
+    at ElementArrayFinder.<computed> [as sendKeys] (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\built\element.js:91:29)
+    at ElementFinder.<computed> [as sendKeys] (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\built\element.js:831:22)
+    at Products.addProduct (F:\work\tests\app\Products.js:48:37)
+    at UserContext.<anonymous> (F:\work\tests\spec.js:38:18)
+    at C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:112:25
+    at new ManagedPromise (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1077:7)
+    at ControlFlow.promise (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2505:12)
+    at schedulerExecute (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:95:18)
+    at TaskQueue.execute_ (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+From: Task: Run it("Should navigate to widget Product and add product") in control flow
+    at UserContext.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:94:19)
+    at attempt (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4297:26)
+    at QueueRunner.run (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4217:20)
+    at QueueRunner.execute (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4199:10)
+    at Spec.queueRunnerFactory (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:909:35)
+    at Spec.execute (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:526:10)
+    at UserContext.fn (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:5340:37)
+    at attempt (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4297:26)
+    at QueueRunner.run (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4217:20)
+    at runNext (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4257:20)
+From asynchronous test: 
+Error
+    at Suite.<anonymous> (F:\work\tests\spec.js:35:5)
+    at addSpecsToSuite (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1107:25)
+    at Env.describe (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1074:7)
+    at describe (C:\Users\Admin\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4399:18)
+    at Object.<anonymous> (F:\work\tests\spec.js:15:1)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at loader (F:\work\node_modules\babel-register\lib\node.js:144:5)
+    at Object.require.extensions.<computed> [as .js] (F:\work\node_modules\babel-register\lib\node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:815:32)]]>
+   </failure>
+  </testcase>
  </testsuite>
 </testsuites>
